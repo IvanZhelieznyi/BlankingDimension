@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blanking Dimension</title>
+
+    <!-- <link rel="stylesheet" href="css/normalize.min.css"> -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/choices.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="blanking-dimension.db"></script>
+</head>
+<body>
+    <section class="calculator" id="calculator">
+        <div class="container">
+            <form action="" class="calculator-form" data-aos="flip-right">
+                <div class="calculator-form-input">
+                    <label for="calculator-form-connection" class="calculator-form-title"> </label>
+                    <select name="website-type" id="calculator-form-connection" class="calculator-form-select">
+                        <option disabled="disabled" selected value="">
+                            Connection
+                        </option>
+                        <option value="upj">UPJ</option>
+                        <option value="upj-m">UPJ-M</option>
+                        <option value="upj-f">UPJ-F</option>
+                        <option value="upj-sp">UPJ-SP</option>
+                        <option value="intrepid">Intrepid</option>
+                    </select>
+                </div>
+
+                <div class="calculator-form-input">
+                    <label for="calculator-form-size" class="calculator-form-title"> </label>
+                    <select name="website-type" id="calculator-form-size" class="calculator-form-select">
+                        <option disabled="disabled" selected value="size">
+                            Size
+                        </option>
+                    </select>
+                </div>
+
+                <div class="calculator-form-input">
+                    <label for="calculator-form-weight" class="calculator-form-title"></label>
+                    <select name="technologies" id="calculator-form-weight" class="calculator-form-select" >
+                        <!-- multiple -->
+                        <option disabled="disabled" selected value="wight">
+                            Wight
+                        </option>
+                    </select>
+                </div>
+
+                <!-- <div class="calculator-form-input">
+                    <label for="" class="calculator-form-title">Personal account and shopping cart:</label>
+                    <div class="calculator-form-input-radio-container" id="calculator-form-input-radio-cart">
+                        <input checked type="radio" class="calculator-form-input-field" id="calculator-form-input-cart-yes" name="cart" value="yes">
+                        <label for="calculator-form-input-cart-yes" class="calculator-form-input-label">inch</label>
+                        <input type="radio" class="calculator-form-input-field" id="calculator-form-input-cart-no" name="cart" value="no">
+                        <label for="calculator-form-input-cart-no" class="calculator-form-input-label">mm</label>
+                    </div>
+                </div> -->
+                <input type="submit" class="accent-btn" id="find-blanking-dimension-btn" value="Find Blanking Dimension">
+            </form>
+        </div>
+    </section>
+
+
+
+    <!-- MODALS -->
+    <div class="modals-wrapper">
+        <div class="modal project-modal modal-area-bgd" id="find-blanking-dimension">
+            <div class="project-modal-container modal-area-content">
+                <!-- <div class="discuss-project-container-close">
+                    <i class="fas fa-times modal-close-btn modal-close-discuss-project"></i>
+                </div> -->
+                
+                <div class="modal-container-blanking-dimension">
+                <img src="img/imgBlankingDimension.bmp" class="img-blanking-dimension" alt="Blanking Dimension">
+                </div>  
+
+                <div class="modal-container-blanking-dimension">
+                    <table>
+                        <tr>
+                            <th rowspan="2">OD</th>
+                            <th rowspan="2">Weight</th>
+                            <th rowspan="2" colspan="2">Wall</th>
+                            <th colspan="6">For Pin</th>
+                            <th colspan="6">For Box</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2">OD</th>
+                            <th colspan="2">ID</th>
+                            <th colspan="2">Minimum
+                            <bh>
+                            Turning/Boring
+                            <br>
+                            Length</th>
+                            <th colspan="2">OD</th>
+                            <th colspan="2">ID</th>
+                            <th colspan="2">Minimum
+                            <br>
+                            Turning/Boring
+                            <br>
+                            Length</th>
+                        </tr>
+                        <tr class="blan-dimen-tr">
+                          <td class="blan-dimen-in">in</td>
+                          <td class="blan-dimen-in">lb/ft</td>
+                          <td class="blan-dimen-in">in</td>
+                          <td class="blan-dimen-mm">mm</td>
+                          <td class="blan-dimen-in">in</td>
+                          <td class="blan-dimen-mm">mm</td>
+                          <td class="blan-dimen-in">in</td>
+                          <td class="blan-dimen-mm">mm</td>
+                          <td class="blan-dimen-in">in</td>
+                          <td class="blan-dimen-mm">mm</td>
+                          <td class="blan-dimen-in">in</td>
+                          <td class="blan-dimen-mm">mm</td>
+                          <td class="blan-dimen-in">in</td>
+                          <td class="blan-dimen-mm">mm</td>
+                          <td class="blan-dimen-in">in</td>
+                          <td class="blan-dimen-mm">mm</td>
+                        </tr>
+                        <tr class="blan-dimen-tr">
+                          <td class="blan-dimen-in" id="size">-</td>
+                          <td class="blan-dimen-in" id="weight">-</td>
+                          <td class="blan-dimen-in">-</td>
+                          <td class="blan-dimen-mm" id="wall">-</td>
+                          <td class="blan-dimen-in" id="pinDiameterOdIn">-</td>
+                          <td class="blan-dimen-mm" id="pinDiameterOdMm">-</td>
+
+                          <td class="blan-dimen-in" id="pinDiameterIdIn">-</td>
+                          <td class="blan-dimen-mm" id="pinDiameterIdMm">-</td>
+                          <td class="blan-dimen-in" id="pinMinimumTurningLengthIn">-</td>
+                          <td class="blan-dimen-mm" id="pinMinimumTurningLengthMm">-</td>
+                          <td class="blan-dimen-in" id="boxDiameterOdIn">-</td>
+                          <td class="blan-dimen-mm" id="boxDiameterOdMm">-</td>
+                          <td class="blan-dimen-in" id="boxDiameterIdIn">-</td>
+                          <td class="blan-dimen-mm" id="boxDiameterIdMm">-</td>
+                          <td class="blan-dimen-in" id="boxMinimumTurningLengthIn">-</td>
+                          <td class="blan-dimen-mm" id="boxMinimumTurningLengthMm">-</td>
+                        </tr>
+                      </table>
+                </div>
+
+                
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+   <script src="js/choices.min.js"></script>
+   <script src="js/calculator.js"></script>
+   <script src="js/modals.js"></script>
+</body>
+</html>

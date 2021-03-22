@@ -1,0 +1,715 @@
+:root {
+  /* background */
+  --c-dark: #141D2D;
+  --c-light: #fff;
+  --c-accent: #FF6B08;
+
+  --c-dark-blue: #253045; 
+  --c-grey-blue: #4A5771;
+  --c-grey-light: #F1F2F2;
+  --c-grey: #BCC1D2;
+
+  /* text */
+  --txt-c-dark: var(--c-dark);
+  --txt-c-grey: #4F5B70;
+  --txt-c-grey-light: var(--c-grey-light);
+  --txt-c-accent: var(--c-accent);
+  --txt-c-light: var(--c-light);
+  --txt-black: #000;
+
+  /* modals */
+  --background-modals: rgba(20, 29, 45, 0.8);
+
+  /* font */
+  --font-main: 'Acrom', sans-serif;
+
+  /* container width */
+  --vertical-scroll: 20px;
+  --mobile: calc(300px + var(--vertical-scroll));
+  --tablet: calc(640px + var(--vertical-scroll));
+  --desktop: calc(900px + var(--vertical-scroll));
+  --desktop-lg: calc(1660px + var(--vertical-scroll));
+
+  /* animation */
+  --animation-fast: 0.1s;
+  --animation-slow: 0.3s;
+
+  --animation-transition: all 0.2s ease-in-out;
+}
+
+@font-face {
+  font-family: "Acrom";
+  src: url("../fonts/acrom/Acrom-ExtraBold.eot");
+  src: local("Acrom ExtraBold"), local("Acrom-ExtraBold"),
+    url("../fonts/acrom/Acrom-ExtraBold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/acrom/Acrom-ExtraBold.woff") format("woff"),
+    url("../fonts/acrom/Acrom-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acrom';
+  src: url('../fonts/acrom/Acrom-Bold.eot');
+  src: local('Acrom Bold'), local('Acrom-Bold'),
+      url('../fonts/acrom/Acrom-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/acrom/Acrom-Bold.woff') format('woff'),
+      url('../fonts/acrom/Acrom-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Acrom';
+  src: url('../fonts/acrom/Acrom-Regular.eot');
+  src: local('Acrom Regular'), local('Acrom-Regular'),
+      url('../fonts/acrom/Acrom-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/acrom/Acrom-Regular.woff') format('woff'),
+      url('../fonts/acrom/Acrom-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Acrom';
+}
+
+/* COMMON */
+
+
+/* .tablet-element {
+  display: none;
+}
+
+.desktop-element {
+  display: none;
+} */
+
+.accent-btn {
+  background: var(--c-accent);
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--c-light);
+  padding: 20px 35px 20px 35px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--animation-transition);
+  margin-top: 70px;
+}
+
+.accent-btn:hover {
+  outline: 1px solid var(--c-accent);
+  background: transparent;
+  color: var(--c-accent);
+}
+
+
+.container {
+  min-width: 320px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 50px 10px 75px 10px;
+}
+
+.container-left {
+  align-items: flex-start;
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 42px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--txt-c-light);
+}
+
+
+/* MODALS */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+  display: block;
+  background: var(--background-modals);
+}
+
+.modal-mobile-menu {
+  background: var(--c-light);
+
+}
+
+.modal-active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-mobile-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.mobile-menu-container {
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.modal-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--c-grey-blue);
+}
+
+.mobile-menu-close {
+  background: var(--c-accent);
+  color: var(--c-light);
+  padding: 10px 14px;
+}
+
+.mobile-menu-items {
+  display: flex;
+  flex-direction: column;
+}
+.mobile-menu-item {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--txt-c-grey);
+  text-decoration: none;
+  margin-bottom: 35px;
+  transition: var(--animation-transition);
+}
+
+.mobile-menu-item:hover {
+  color: var(--txt-c-accent);
+}
+
+.mobile-menu-contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu-my-tel {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 150%;
+  color: var(--txt-c-dark);
+  margin-bottom: 10px;
+}
+
+.mobile-menu-my-mail {
+  text-decoration: none;
+  color: var(--txt-c-dark);
+  font-size: 17px;
+  line-height: 150%;
+  margin-bottom: 60px;
+}
+
+/* PROJECT MODAL */
+
+.project-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+  box-sizing: border-box;
+}
+
+.project-modal-container {
+  background: var(--c-light);
+  padding: 35px;
+  text-align: left;
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  width: auto;
+}
+
+.project-modal-scrollable {
+  overflow-y: auto;
+  height: 100%;
+  padding: 0 25px;
+}
+
+.project-modal-title {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--txt-c-dark);
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0 0 25px 0;
+  display: block;
+}
+
+.project-modal-text {
+  font-size: 16px;
+  line-height: 145%;
+  color: var(--txt-c-dark);
+  margin: 0 0 30px 0;
+}
+
+.project-modal-img {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.swiper-container {
+  width: 300px;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.discuss-project-container-close {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 16px;
+  margin-top: 14px;
+  margin-bottom: 25px;
+}
+
+.modal-close-discuss-project {
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--c-grey-blue);
+
+}
+
+
+
+
+
+
+
+
+
+/* CALCULATOR FORM SECTION */
+
+.calculator {
+  background: var(--c-dark);
+}
+
+.calculator-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.calculator-icon {
+  width: 195px;
+}
+
+.calculator-descr {
+  width: 320px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 150%;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--txt-c-light);
+  margin: 0 0 30px 0;
+}
+
+.calculator-descr span {
+  background: var(--c-accent);
+  padding: 5px;
+}
+
+.calculator-descr .calculator-descr-accent {
+  padding: 5px 10px;
+}
+
+.calculator-title {
+  width: 270px;
+  margin-bottom: 20px;
+}
+
+.calculator-text {
+  font-size: 17px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--txt-c-light);
+  margin: 20px 0 30px 0;
+}
+
+.calculator-form {
+  background: var(--c-light);
+  padding: 30px 25px;
+  font-size: 34px;
+}
+
+.calculator-form-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.calculator-form-title {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 150%;
+  color: var(--txt-c-dark);
+  margin-bottom: 15px;
+}
+
+.calculator-form-select {
+  background: var(--c-accent);
+  border: none;
+  border-bottom: 2px solid var(--c-grey-light);
+  padding: 5px 0 15px 0;
+  cursor: pointer;
+  font-size: 34px;
+}
+
+.calculator-form-input-field {
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 34px;
+}
+
+.calculator-form-input-radio-container {
+  display: flex;
+  align-items: center;
+}
+
+.calculator-form-input-label {
+  margin-right: 15px;
+  font-size: 34px;
+  line-height: 150%;
+  color: var(--c-dark);
+}
+
+.calculator-form-total-cost {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  color: var(--txt-c-dark);
+  margin: 0;
+}
+
+.calculator-form-total {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 150%;
+  color: var(--txt-c-dark);
+  margin-bottom: 0px;
+}
+
+/* contacts section */
+.contacts-section {
+  text-align: center;
+  font-size: 17px;
+  line-height: 150%;
+  margin-top: 30px;
+}
+
+.contacts-section-title {
+  font-weight: bold;
+  margin: 0;
+  color: var(--txt-c-dark);
+}
+
+.contacts-section-skill {
+ margin: 0 0 20px 0;
+ color: var(--c-dark-blue);
+}
+
+.contacts-section-linc-tel {
+  font-weight: bold;
+  margin: 0 0 15px 0;
+  color: var(--txt-c-dark);
+}
+
+.contacts-section-linc-tel a {
+  text-decoration: none;
+  color: var(--txt-c-dark);
+}
+
+.contacts-section-linc-mail {
+  margin: 0 0 30px 0;
+  color: var(--txt-c-dark);
+}
+
+.contacts-section-linc-mail a {
+  text-decoration: none;
+  color: var(--txt-c-dark);
+}
+
+.contacts-section-icons {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  margin-bottom: 50px;
+}
+
+.contacts-section-icon {
+  margin: 0 17px;
+  color: var(--c-dark-blue);
+}
+
+/* MULTI SELECT */
+
+
+.calculator-form-input .tech-input-container .choices__item {
+  background: var(--c-accent);
+  border: none;
+  border-radius: 3px;
+  position: relative;
+  font-size: 34px;
+}
+
+.calculator-form-input .tech-input-container:after {
+  content: "\f107";
+  height: 0;
+  width: 0;
+  position: absolute;
+  right: 10px;
+  top: 45%;
+  margin-top: -2.5px;
+  cursor: pointer;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.calculator-form-input .tech-input-container  {
+  background: transparent;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid var(--c-grey);
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  min-height: 35px;
+  box-sizing: border-box;
+}
+
+.calculator-form-input .choices__input {
+  display: none;
+}
+
+.calculator-form-input .choices__item .choices__button {
+  border-left: none;
+  margin: 0;
+  padding-left: 8px;
+  background-size: 10px;
+  font-size: 30px;
+}
+
+
+@media only screen and (min-width: 640px) {
+
+  
+
+/* 
+
+ .calculator-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .calculator-title {
+    text-align: left;
+    width: 100%;
+    font-size: 50px;
+    line-height: 60px;
+    margin: 0 0 35px 0;
+  }
+
+  .calculator-descr {
+    font-size: 36px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    align-items: flex-start
+  }
+
+  .calculator-descr span {
+    padding: 5px 15px;
+  }
+
+  .calculator-icon {
+    position: absolute;
+    top: 425px;
+    right: 30px;
+    width: 330px;
+    z-index: 10;
+  }
+
+  .calculator-text {
+    text-align: left;
+    width: 300px;
+    margin: 10px 0 60px 0;
+  }
+
+  .calculator-form {
+    z-index: 20;
+    padding: 60px 80px;
+  }
+
+  .contacts-section {
+    display: flex;
+    flex-direction: inherit;
+    justify-content: space-between;
+    margin: 40px 20px 5px 20px;
+  }
+
+  .contacts-section-skill {
+    margin: 0;
+  }
+
+  .contacts-section-linc-mail {
+    margin: 0;
+  }
+
+  .contacts-section-icons {
+    justify-content: left;
+    margin-bottom: 60px;
+  }
+
+  .contacts-section-icon {
+    margin-left: 20px ;
+  }
+
+  .modal-active-tablet {
+    opacity: 0;
+    transition: opacity 0s ease-in-out;
+  }
+
+  .swiper-container {
+    width: 550px;
+  } */
+
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+
+/*   
+
+  .calculator .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+
+  
+
+  .calculator-form {
+    padding: 40px 55px 60px 55px;
+    width: 390px;
+  }
+
+  .calculator-title {
+    margin-bottom: 50px;
+    font-size: 70px;
+    line-height: 84px;
+  }
+
+  .calculator-descr {
+    margin-bottom: 55px;
+    position: relative;
+    z-index: 11;
+  }
+
+  .calculator-text {
+    width: 350px
+  }
+
+  .calculator-icon {
+    top: 540px;
+    left: 410px;
+  }
+
+  .contacts-section {
+    margin-top: 0;
+    display: contents
+  }
+
+
+  .discuss-project-container-title {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .discuss-project-container-title-two {
+    font-size: 36px;
+    line-height: 43px;
+  }
+
+  .project-modal-scrollable {
+    padding: 55px 95px 0 95px;
+    height: 80%
+  }
+
+  .swiper-container {
+    width: 650px;
+  } */
+
+
+
+}
+
+.modal-container-blanking-dimension {
+  display: flex;
+  justify-content: center;
+  width: 1150px;
+}
+
+.img-blanking-dimension {
+  width: 80%;
+}
+
+
+
+th, td {
+  padding: 10px; 
+  border: 1px solid #000;
+  text-align: center;
+}
+
+.blan-dimen-in {
+  padding: 0 21px;
+}
+
+.blan-dimen-mm {
+  padding: 0 15px;
+}
