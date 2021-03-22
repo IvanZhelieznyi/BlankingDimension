@@ -692,6 +692,7 @@ body {
   display: flex;
   justify-content: center;
   width: 1150px;
+  padding: 35px;
 }
 
 .img-blanking-dimension {

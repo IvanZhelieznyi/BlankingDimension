@@ -101,7 +101,7 @@ classListRemove.addEventListener('click', function() {
   //console.log(classListRemove.value);
   if (classListRemove.value !== classListRemoveValue) {
     classListRemoveValue = classListRemove.value;
-    console.log(classListRemove.value);
+    //console.log(classListRemove.value);
     sizeMultiSelect.clearStore();
     weightMultiSelect.clearStore();
     // sizeMultiSelect.setChoices([{
@@ -122,8 +122,8 @@ classListRemove.addEventListener('click', function() {
     for (y = 0; y < conections.length; y++) {
       if (classListRemove.value === conections[y].conectionType) {
         if (conections[y].size !== iSize) {
-          console.log('size');
-          console.log(conections[y].size);
+          //console.log('size');
+          //console.log(conections[y].size);
           iSize = conections[y].size;
           sizeMultiSelect.setChoices([{
             value: `${conections[y].size}`,
@@ -142,9 +142,9 @@ classListRemove.addEventListener('click', function() {
 sizeMultiSelect.passedElement.element.addEventListener(
   'addItem',
   function(event) {
-    console.log('sizeMultiSelect.getValue()');
-    console.log(sizeMultiSelect.getValue());
-    console.log(event.detail.value);
+    //console.log('sizeMultiSelect.getValue()');
+    //console.log(sizeMultiSelect.getValue());
+    //console.log(event.detail.value);
     const sizeSelected = event.detail.value;
     weightMultiSelect.clearStore();
     // weightMultiSelect.setChoices([{
@@ -156,8 +156,8 @@ sizeMultiSelect.passedElement.element.addEventListener(
     for (y = 0; y < conections.length; y++) {
       if (classListRemove.value === conections[y].conectionType && sizeSelected === conections[y].size) {
         if (conections[y].weight) {
-          console.log('weight');
-          console.log(conections[y].weight);
+          //console.log('weight');
+          //console.log(conections[y].weight);
           weightMultiSelect.setChoices([{
             value: `${conections[y].weight}`,
             label: `${conections[y].weight}`,
@@ -181,14 +181,14 @@ weightMultiSelect.passedElement.element.addEventListener(
 
 
     for (y = 0; y < conections.length; y++) {
-      console.log('for');
+      //console.log('for');
       if (classListRemove.value === conections[y].conectionType && sizeSelected === conections[y].size && weightSelected === conections[y].weight) {
-        console.log('sizeMultiSelect.getValue()');
-        console.log(sizeMultiSelect.getValue(true));
-        console.log('weightMultiSelect.getValue()');
-        console.log(weightMultiSelect.getValue(true));
-        console.log('conections[y]');
-        console.log(conections[y].length);
+        // console.log('sizeMultiSelect.getValue()');
+        // console.log(sizeMultiSelect.getValue(true));
+        // console.log('weightMultiSelect.getValue()');
+        // console.log(weightMultiSelect.getValue(true));
+        // console.log('conections[y]');
+        // console.log(conections[y].length);
 
         let letElement = document.querySelector('#size');
         letElement.textContent = conections[y].size;
@@ -228,26 +228,26 @@ weightMultiSelect.passedElement.element.addEventListener(
 );
 
 
-function fillInTheTable(id) {
-  const costElement = document.querySelector(".calculator-form-total-cost");
-  let Calculating = 'Calculating';
-  costElement.textContent = Calculating;
-  let delayInterval = 400;
-  let numberPoint = 7
-  let timerId = setTimeout(function request() {
-    Calculating += '.';
-    numberPoint -= 1;
-    costElement.textContent = Calculating;
-    if (numberPoint >= 1) {
-      timerId = setTimeout(request, delayInterval);
-    }
-    else {
-      costElement.textContent = sum + "$";
-    }
-  }, delayInterval);
+// function fillInTheTable(id) {
+//   const costElement = document.querySelector(".calculator-form-total-cost");
+//   let Calculating = 'Calculating';
+//   costElement.textContent = Calculating;
+//   let delayInterval = 400;
+//   let numberPoint = 7
+//   let timerId = setTimeout(function request() {
+//     Calculating += '.';
+//     numberPoint -= 1;
+//     costElement.textContent = Calculating;
+//     if (numberPoint >= 1) {
+//       timerId = setTimeout(request, delayInterval);
+//     }
+//     else {
+//       costElement.textContent = sum + "$";
+//     }
+//   }, delayInterval);
 
   
-}
+// }
 
 
 
