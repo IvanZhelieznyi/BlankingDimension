@@ -97,13 +97,13 @@ body {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--c-light);
-  padding: 20px 35px 20px 35px;
+  padding: 20px;
   outline: none;
   border: none;
   cursor: pointer;
   text-decoration: none;
   transition: var(--animation-transition);
-  margin-top: 70px;
+  margin-top: 10px;
 }
 
 .accent-btn:hover {
@@ -114,7 +114,7 @@ body {
 
 
 .container {
-  min-width: 320px;
+  min-width: 300px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -156,7 +156,6 @@ body {
 
 .modal-mobile-menu {
   background: var(--c-light);
-
 }
 
 .modal-active {
@@ -248,12 +247,11 @@ body {
 
 .project-modal-container {
   background: var(--c-light);
-  padding: 35px;
   text-align: left;
   position: relative;
   box-sizing: border-box;
-  height: auto;
-  width: auto;
+  max-width: 90%;
+  min-width: 850px;
 }
 
 .project-modal-scrollable {
@@ -366,7 +364,7 @@ body {
 
 .calculator-form {
   background: var(--c-light);
-  padding: 30px 25px;
+  padding: 30px 5px;
   font-size: 34px;
 }
 
@@ -388,45 +386,9 @@ body {
   background: var(--c-accent);
   border: none;
   border-bottom: 2px solid var(--c-grey-light);
-  padding: 5px 0 15px 0;
+  padding: 5px;
   cursor: pointer;
-  font-size: 34px;
-}
-
-.calculator-form-input-field {
-  margin-right: 10px;
-  cursor: pointer;
-  font-size: 34px;
-}
-
-.calculator-form-input-radio-container {
-  display: flex;
-  align-items: center;
-}
-
-.calculator-form-input-label {
-  margin-right: 15px;
-  font-size: 34px;
-  line-height: 150%;
-  color: var(--c-dark);
-}
-
-.calculator-form-total-cost {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 150%;
-  display: flex;
-  align-items: center;
-  color: var(--txt-c-dark);
-  margin: 0;
-}
-
-.calculator-form-total {
-  font-weight: bold;
-  font-size: 17px;
-  line-height: 150%;
-  color: var(--txt-c-dark);
-  margin-bottom: 0px;
+  font-size: 24px;
 }
 
 /* contacts section */
@@ -489,7 +451,8 @@ body {
   border: none;
   border-radius: 3px;
   position: relative;
-  font-size: 34px;
+  font-size: 24px;
+  padding: 5px;
 }
 
 .calculator-form-input .tech-input-container:after {
@@ -691,7 +654,7 @@ body {
 .modal-container-blanking-dimension {
   display: flex;
   justify-content: center;
-  width: 1150px;
+  max-width: 90%;
   padding: 35px;
 }
 
@@ -699,18 +662,21 @@ body {
   width: 80%;
 }
 
-
+.modal-container-blanking-dimension-table {
+  width: 80%;
+}
 
 th, td {
-  padding: 10px; 
+  padding: 5px; 
   border: 1px solid #000;
   text-align: center;
+  font-size: 12px;
 }
 
 .blan-dimen-in {
-  padding: 0 21px;
+  padding: 0 11px;
 }
 
 .blan-dimen-mm {
-  padding: 0 15px;
+  padding: 0 5px;
 }
