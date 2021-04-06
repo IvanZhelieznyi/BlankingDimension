@@ -3,7 +3,7 @@ const sizeSelect = document.querySelector('#calculator-form-size');
 const weightSelect = document.querySelector('#calculator-form-weight');
 
 const sizeMultiSelect = new Choices(sizeSelect, {
-  choices: [],
+  //choices: [],
   allowSearch: false,
   silent: false,
   renderChoiceLimit: -1,
@@ -31,7 +31,7 @@ const sizeMultiSelect = new Choices(sizeSelect, {
 });
 
 const weightMultiSelect = new Choices(weightSelect, {
-  choices: [],
+  //choices: [],
   allowSearch: false,
   silent: false,
   renderChoiceLimit: -1,
@@ -104,6 +104,18 @@ classListRemove.addEventListener('click', function() {
     //console.log(classListRemove.value);
     sizeMultiSelect.clearStore();
     weightMultiSelect.clearStore();
+    sizeMultiSelect.setChoices([{
+      value: "",
+      label: "Size",
+      selected: true,
+      disabled: true,
+    }]);
+    weightMultiSelect.setChoices([{
+      value: "",
+      label: "Weight",
+      selected: true,
+      disabled: true,
+    }]);
     // sizeMultiSelect.setChoices([{
     //   value: 'size',
     //   label: 'Size',
@@ -147,6 +159,12 @@ sizeMultiSelect.passedElement.element.addEventListener(
     //console.log(event.detail.value);
     const sizeSelected = event.detail.value;
     weightMultiSelect.clearStore();
+    weightMultiSelect.setChoices([{
+      value: "",
+      label: "Weight",
+      selected: true,
+      disabled: true,
+    }]);
     // weightMultiSelect.setChoices([{
     //   value: 'weight',
     //   label: 'Weight',

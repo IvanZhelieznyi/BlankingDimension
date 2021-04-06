@@ -250,8 +250,7 @@ body {
   text-align: left;
   position: relative;
   box-sizing: border-box;
-  max-width: 90%;
-  min-width: 850px;
+  width: 90%;
 }
 
 .project-modal-scrollable {
@@ -654,8 +653,9 @@ body {
 .modal-container-blanking-dimension {
   display: flex;
   justify-content: center;
-  max-width: 90%;
-  padding: 35px;
+  /* width: 90%;
+  padding: 12px; */
+  padding-top: 20px;
 }
 
 .img-blanking-dimension {
@@ -667,16 +667,16 @@ body {
 }
 
 th, td {
-  padding: 5px; 
+  padding: 1px; 
   border: 1px solid #000;
   text-align: center;
-  font-size: 12px;
+  font-size: 2px;
 }
 
 .blan-dimen-in {
-  padding: 0 11px;
+  /* padding: 0 11px; */
 }
 
 .blan-dimen-mm {
-  padding: 0 5px;
+  /* padding: 0 5px; */
 }
