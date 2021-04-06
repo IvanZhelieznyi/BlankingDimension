@@ -110,12 +110,12 @@ classListRemove.addEventListener('click', function() {
       selected: true,
       disabled: true,
     }]);
-    weightMultiSelect.setChoices([{
-      value: "",
-      label: "Weight",
-      selected: true,
-      disabled: true,
-    }]);
+    // weightMultiSelect.setChoices([{
+    //   value: "",
+    //   label: "Weight",
+    //   selected: true,
+    //   disabled: true,
+    // }]);
     // sizeMultiSelect.setChoices([{
     //   value: 'size',
     //   label: 'Size',
