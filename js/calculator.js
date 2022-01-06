@@ -208,6 +208,9 @@ weightMultiSelect.passedElement.element.addEventListener(
 
         letElement = document.querySelector('#c-print-name');
         letElement.textContent = conections[y].conectionType;
+        letElement = document.querySelector('#title-name');
+        let letElementText = letElement.textContent;
+        letElement.textContent = letElementText + conections[y].conectionType + " " + conections[y].size + " #" + conections[y].weight;
         break;
       }
     }
