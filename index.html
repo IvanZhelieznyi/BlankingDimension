@@ -47,9 +47,14 @@
 
 
     <!-- MODALS -->
-    <div class="modals-wrapper">
+    <div class="modals-wrapper" >
         <div class="modal project-modal modal-area-bgd" id="find-blanking-dimension">
-            <div class="project-modal-container modal-area-content">
+            <div class="project-modal-container modal-area-content" id="c-print">
+                
+                <div class="page-name">
+                    <h1 class="front-page-my-name">Blanking Dimension:</h1><h1 class="front-page-my-name" id="c-print-name"></h1>
+                </div>
+
                 <div class="modal-container-blanking-dimension">
                     <img src="img/imgBlankingDimension.bmp" class="img-blanking-dimension" alt="Blanking Dimension">
                 </div>  
@@ -57,68 +62,79 @@
                 <div class="modal-container-blanking-dimension">
                     <table class="modal-container-blanking-dimension-table">
                         <tr>
-                            <th rowspan="2">OD</th>
-                            <th rowspan="2">Weight</th>
-                            <th rowspan="2" colspan="2">Wall</th>
-                            <th colspan="6">For Pin</th>
-                            <th colspan="6">For Box</th>
+                            <th class="blan-dimen-title" rowspan="2">OD</th>
+                            <th class="blan-dimen-title" rowspan="2" colspan="2">Wall</th>
+                            <th class="blan-dimen-title" rowspan="2">Weight</th>
+                            <th class="blan-dimen-title" colspan="6">For Pin</th>
+                            <th class="blan-dimen-title" colspan="6">For Box</th>
                         </tr>
                         <tr>
-                            <th colspan="2">OD</th>
-                            <th colspan="2">ID</th>
-                            <th colspan="2">Minimum
-                            <bh>
+                            <th class="blan-dimen-title" colspan="2">OD</th>
+                            <th class="blan-dimen-title" colspan="2">ID</th>
+                            <th class="blan-dimen-title" colspan="2">
                             Turning/Boring
                             <br>
                             Length</th>
-                            <th colspan="2">OD</th>
-                            <th colspan="2">ID</th>
-                            <th colspan="2">Minimum
-                            <br>
+                            <th class="blan-dimen-title" colspan="2">OD</th>
+                            <th class="blan-dimen-title" colspan="2">ID</th>
+                            <th class="blan-dimen-title" colspan="2">
                             Turning/Boring
                             <br>
                             Length</th>
                         </tr>
                         <tr class="blan-dimen-tr">
-                          <td class="blan-dimen-in">in</td>
-                          <td class="blan-dimen-in">lb/ft</td>
-                          <td class="blan-dimen-in">in</td>
-                          <td class="blan-dimen-mm">mm</td>
-                          <td class="blan-dimen-in">in</td>
-                          <td class="blan-dimen-mm">mm</td>
-                          <td class="blan-dimen-in">in</td>
-                          <td class="blan-dimen-mm">mm</td>
-                          <td class="blan-dimen-in">in</td>
-                          <td class="blan-dimen-mm">mm</td>
-                          <td class="blan-dimen-in">in</td>
-                          <td class="blan-dimen-mm">mm</td>
-                          <td class="blan-dimen-in">in</td>
-                          <td class="blan-dimen-mm">mm</td>
-                          <td class="blan-dimen-in">in</td>
-                          <td class="blan-dimen-mm">mm</td>
+                            <td class="blan-dimen-tolerance blan-dimen-toleran" colspan="4">tolerance:</td>
+                            <td class="blan-dimen-toleran" id="tolerPinDiameterOdIn">-</td>
+                            <td class="blan-dimen-toleran" id="tolerPinDiameterOdMm">-</td>
+                            <td class="blan-dimen-toleran" id="tolerPinDiameterIdIn">-</td>
+                            <td class="blan-dimen-toleran" id="tolerPinDiameterIdMm">-</td>
+                            <td class="blan-dimen-toleran" colspan="2">minimum</td>
+                            <td class="blan-dimen-toleran" id="tolerBoxDiameterOdIn">-</td>
+                            <td class="blan-dimen-toleran" id="tolerBoxDiameterOdMm">-</td>
+                            <td class="blan-dimen-toleran" id="tolerBoxDiameterIdIn">-</td>
+                            <td class="blan-dimen-toleran" id="tolerBoxDiameterIdMm">-</td>
+                            <td class="blan-dimen-toleran" colspan="2">minimum</td>
                         </tr>
                         <tr class="blan-dimen-tr">
-                          <td class="blan-dimen-in" id="size">-</td>
-                          <td class="blan-dimen-in" id="weight">-</td>
-                          <td class="blan-dimen-in">-</td>
-                          <td class="blan-dimen-mm" id="wall">-</td>
-                          <td class="blan-dimen-in" id="pinDiameterOdIn">-</td>
-                          <td class="blan-dimen-mm" id="pinDiameterOdMm">-</td>
-
-                          <td class="blan-dimen-in" id="pinDiameterIdIn">-</td>
-                          <td class="blan-dimen-mm" id="pinDiameterIdMm">-</td>
-                          <td class="blan-dimen-in" id="pinMinimumTurningLengthIn">-</td>
-                          <td class="blan-dimen-mm" id="pinMinimumTurningLengthMm">-</td>
-                          <td class="blan-dimen-in" id="boxDiameterOdIn">-</td>
-                          <td class="blan-dimen-mm" id="boxDiameterOdMm">-</td>
-                          <td class="blan-dimen-in" id="boxDiameterIdIn">-</td>
-                          <td class="blan-dimen-mm" id="boxDiameterIdMm">-</td>
-                          <td class="blan-dimen-in" id="boxMinimumTurningLengthIn">-</td>
-                          <td class="blan-dimen-mm" id="boxMinimumTurningLengthMm">-</td>
+                          <td class="blan-dimen-in-mm">in</td>
+                          <td class="blan-dimen-in-mm">lb/ft</td>
+                          <td class="blan-dimen-in-mm">in</td>
+                          <td class="blan-dimen-in-mm">mm</td>
+                          <td class="blan-dimen-in-mm">in</td>
+                          <td class="blan-dimen-in-mm">mm</td>
+                          <td class="blan-dimen-in-mm">in</td>
+                          <td class="blan-dimen-in-mm">mm</td>
+                          <td class="blan-dimen-in-mm">in</td>
+                          <td class="blan-dimen-in-mm">mm</td>
+                          <td class="blan-dimen-in-mm">in</td>
+                          <td class="blan-dimen-in-mm">mm</td>
+                          <td class="blan-dimen-in-mm">in</td>
+                          <td class="blan-dimen-in-mm">mm</td>
+                          <td class="blan-dimen-in-mm">in</td>
+                          <td class="blan-dimen-in-mm">mm</td>
+                        </tr>
+                        <tr class="blan-dimen-tr">
+                          <td class="blan-dimen-value" id="size">-</td>
+                          <td class="blan-dimen-value" id="weight">-</td>
+                          <td class="blan-dimen-value">-</td>
+                          <td class="blan-dimen-value" id="wall">-</td>
+                          <td class="blan-dimen-value" id="pinDiameterOdIn">-</td>
+                          <td class="blan-dimen-value" id="pinDiameterOdMm">-</td>
+                          <td class="blan-dimen-value" id="pinDiameterIdIn">-</td>
+                          <td class="blan-dimen-value" id="pinDiameterIdMm">-</td>
+                          <td class="blan-dimen-value" id="pinMinimumTurningLengthIn">-</td>
+                          <td class="blan-dimen-value" id="pinMinimumTurningLengthMm">-</td>
+                          <td class="blan-dimen-value" id="boxDiameterOdIn">-</td>
+                          <td class="blan-dimen-value" id="boxDiameterOdMm">-</td>
+                          <td class="blan-dimen-value" id="boxDiameterIdIn">-</td>
+                          <td class="blan-dimen-value" id="boxDiameterIdMm">-</td>
+                          <td class="blan-dimen-value" id="boxMinimumTurningLengthIn">-</td>
+                          <td class="blan-dimen-value" id="boxMinimumTurningLengthMm">-</td>
                         </tr>
                     </table>
                 </div>
             </div>
+            <button onclick="makePDF()">Generate PDF</button>
         </div>
     </div>
 
@@ -126,5 +142,7 @@
    <script src="js/choices.min.js"></script>
    <script src="js/calculator.js"></script>
    <script src="js/modals.js"></script>
+   <script src="js/myjspdf.js"></script>
+
 </body>
 </html>

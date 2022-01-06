@@ -188,6 +188,26 @@ weightMultiSelect.passedElement.element.addEventListener(
         letElement.textContent = conections[y].boxMinimumTurningLengthIn;
         letElement = document.querySelector('#boxMinimumTurningLengthMm');
         letElement.textContent = conections[y].boxMinimumTurningLengthMm;
+
+        letElement = document.querySelector('#tolerPinDiameterOdIn');
+        letElement.textContent = conections[y].tolerPinDiameterOdIn;
+        letElement = document.querySelector('#tolerPinDiameterOdMm');
+        letElement.textContent = conections[y].tolerPinDiameterOdMm;
+        letElement = document.querySelector('#tolerPinDiameterIdIn');
+        letElement.textContent = conections[y].tolerPinDiameterIdIn;
+        letElement = document.querySelector('#tolerPinDiameterIdMm');
+        letElement.textContent = conections[y].tolerPinDiameterIdMm;
+        letElement = document.querySelector('#tolerBoxDiameterOdIn');
+        letElement.textContent = conections[y].tolerBoxDiameterOdIn;
+        letElement = document.querySelector('#tolerBoxDiameterOdMm');
+        letElement.textContent = conections[y].tolerBoxDiameterOdMm;
+        letElement = document.querySelector('#tolerBoxDiameterIdIn');
+        letElement.textContent = conections[y].tolerBoxDiameterIdIn;
+        letElement = document.querySelector('#tolerBoxDiameterIdMm');
+        letElement.textContent = conections[y].tolerBoxDiameterIdMm;
+
+        letElement = document.querySelector('#c-print-name');
+        letElement.textContent = conections[y].conectionType;
         break;
       }
     }
@@ -221,45 +241,3 @@ const calculatorform = document.querySelector('.calculator-form');
 calculatorform.addEventListener('submit', function(event) {
   event.preventDefault();
 });
-
-function convertCartOptionToPrice(option) {
-  if (option == 'yes') {
-    return 300;
-  }
-  return 0;
-}
-
-function convertReceptionOptionToPrice(option) {
-  if (option == 'yes') {
-    return 600;
-  }
-  return 0;
-}
-
-function getTotalSum(arr1) {
-  let totalSum = 0;
-
-  arr1.forEach(function (tech) {
-    totalSum += extractPriceFromValue(tech.value);
-  });
-  return totalSum;
-}
-
-function extractPriceFromValue(str) {
-  const price = str.match(/:\d+/);
-
-  if (price) {
-    return Number(price[0].slice(1)) || 0;
-  }
-
-  return 0;
-}
-
-//print
-function printPdf() {
-  var e = this;
-  (this.printingPdf = !0),
-    setTimeout(function () {
-      window.print(), (e.printingPdf = !1);
-    }, 5000);
-}

@@ -16,6 +16,7 @@
   --txt-c-accent: var(--c-accent);
   --txt-c-light: var(--c-light);
   --txt-black: #000;
+  --txt-yelow: rgb(247, 231, 9);
 
   /* modals */
   --background-modals: rgba(20, 29, 45, 0.8);
@@ -65,6 +66,38 @@
       url('../fonts/acrom/Acrom-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+}
+
+@media print {
+  @page {
+      margin: 30px; /*отступ от краев листа, работает*/
+  }
+
+  .img-blanking-dimension {
+    padding: 25px 250px 20px 250px;
+  }
+
+  .blan-dimen-title {
+    padding: 5px; 
+    border: 1px solid var(--border-color);
+    font-size: 13px;
+  }
+
+  .blan-dimen-toleran {
+    padding: 2px; 
+    border: 1px solid var(--border-color);
+    font-size: 10px;
+  }
+
+  .blan-dimen-in-mm {
+    padding: 3px 5px;
+    font-size: 10px;
+  }
+
+  .blan-dimen-value {
+    padding: 3px 5px;
+    font-size: 13px;
+  }
 }
 
 html {
@@ -130,6 +163,30 @@ body {
   display: block;
   background: var(--background-modals);
 }
+
+.page-name {
+  display: block;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+.front-page-my-name {
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 31px;
+  text-transform: uppercase;
+  color: var(--c-light);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  margin: initial;
+}
+
+
 
 
 .modal-active {
@@ -267,12 +324,9 @@ th, td {
   font-size: 5px;
 }
 
-.blan-dimen-in {
-  /* padding: 0 11px; */
-}
 
-.blan-dimen-mm {
-  /* padding: 0 5px; */
+.blan-dimen-tolerance {
+  text-align: end;
 }
 
 .choices__list--single {
@@ -295,9 +349,20 @@ th, td {
     width: 60%;
   }
 
-  th, td {
+  th {
     padding: 3px; 
     border: 0.5px solid var(--border-color);
+    font-size: 10px;
+  }
+
+  td {
+    padding: 1px; 
+    border: 0.5px solid var(--border-color);
+    font-size: 7px;
+  }
+
+  .blan-dimen-value {
+    padding: 2px 4px;
     font-size: 10px;
   }
 
@@ -311,16 +376,28 @@ th, td {
   }
 
   .project-modal-container {
-    width: 900px;
+    width: 295mm;
+    padding: 10px 0 40px 0;
   }
 
   .img-blanking-dimension {
     width: 60%;
   }
 
-  th, td {
+  th {
     padding: 5px; 
     border: 1px solid var(--border-color);
+    font-size: 14px;
+  }
+
+  td {
+    padding: 2px; 
+    border: 1px solid var(--border-color);
+    font-size: 10px;
+  }
+
+  .blan-dimen-value {
+    padding: 3px 5px;
     font-size: 14px;
   }
 
