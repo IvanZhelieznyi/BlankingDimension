@@ -77,10 +77,22 @@
     padding: 25px 250px 20px 250px;
   }
 
+  .img-Interpipe_logo {
+    position: fixed;
+    width: 100px;
+    left: 1000px;
+    top: 5px;
+  }
+
   .blan-dimen-title {
     padding: 5px; 
     border: 1px solid var(--border-color);
     font-size: 13px;
+  }
+
+  .modal-container-blanking-dimension-table {
+    border-spacing: 2px;
+    /* width: 1900px; */
   }
 
   .blan-dimen-toleran {
@@ -312,6 +324,12 @@ body {
   width: 80%;
 }
 
+.img-Interpipe_logo {
+  position: absolute;
+    width: 100px;
+    right: 35px;
+}
+
 .modal-container-blanking-dimension-table {
   width: 80%;
   border-spacing: .5px;
@@ -349,6 +367,12 @@ th, td {
     width: 60%;
   }
 
+  .img-Interpipe_logo {
+    position: absolute;
+    width: 100px;
+    right: 35px;
+  }
+
   th {
     padding: 3px; 
     border: 0.5px solid var(--border-color);
@@ -373,6 +397,7 @@ th, td {
 
   .modal-container-blanking-dimension-table {
     border-spacing: 2px;
+    width: 900px;
   }
 
   .project-modal-container {
@@ -382,6 +407,13 @@ th, td {
 
   .img-blanking-dimension {
     width: 60%;
+  }
+
+  .img-Interpipe_logo {
+    position: fixed;
+    width: 100px;
+    right: 145px;
+    top: 170px;
   }
 
   th {
