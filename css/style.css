@@ -410,10 +410,10 @@ th, td {
   }
 
   .img-Interpipe_logo {
-    position: fixed;
+    position: absolute;
     width: 100px;
-    right: 145px;
-    top: 170px;
+    right: 25px;
+    top: 25px;
   }
 
   th {
