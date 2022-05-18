@@ -74,12 +74,11 @@
   }
 
   .img-blanking-dimension {
-    padding: 25px 250px 20px 250px;
+    padding: 80px 250px 20px 250px;
   }
 
   .img-Interpipe_logo {
     position: fixed;
-    width: 100px;
     left: 1000px;
     top: 5px;
   }
@@ -321,18 +320,19 @@ body {
 }
 
 .img-blanking-dimension {
-  width: 80%;
+  width: 50%;
 }
 
 .img-Interpipe_logo {
   position: absolute;
-    width: 100px;
-    right: 35px;
+    width: 120px;
+    right: 15px;
 }
 
 .modal-container-blanking-dimension-table {
   width: 80%;
   border-spacing: .5px;
+  margin-bottom: 40px;
 }
 
 th, td {
@@ -369,8 +369,8 @@ th, td {
 
   .img-Interpipe_logo {
     position: absolute;
-    width: 100px;
-    right: 35px;
+    width: 70px;
+    right: 25px;
   }
 
   th {
@@ -406,12 +406,12 @@ th, td {
   }
 
   .img-blanking-dimension {
-    width: 60%;
+    width: 50%;
   }
 
   .img-Interpipe_logo {
     position: absolute;
-    width: 100px;
+    width: 120px;
     right: 25px;
     top: 25px;
   }
